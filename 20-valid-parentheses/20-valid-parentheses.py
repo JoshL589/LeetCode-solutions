@@ -14,6 +14,7 @@ class Solution:
                 continue
             if stack != [] and char == hashmap[stack[-1]]:
                 stack.pop()
+                continue
             else:
                 return False
         if stack == []:
