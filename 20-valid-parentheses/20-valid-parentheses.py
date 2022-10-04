@@ -12,7 +12,7 @@ class Solution:
             if char in hashmap:
                 stack.append(char)
                 continue
-            if stack != [] and char == hashmap[stack[-1]]:
+            elif stack != [] and char == hashmap[stack[-1]]:
                 stack.pop()
             else:
                 return False
