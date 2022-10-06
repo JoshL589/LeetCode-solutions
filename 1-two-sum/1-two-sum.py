@@ -3,9 +3,9 @@ class Solution:
         
         prevmap = {}
         
-        for i, n in enumerate(nums):
-            diff = target - n
+        for i, j in enumerate(nums):
+            diff = target - j
             if diff in prevmap:
                 return [prevmap[diff], i]
-            prevmap[n] = i
-        
+            else:
+                prevmap[j] = i
