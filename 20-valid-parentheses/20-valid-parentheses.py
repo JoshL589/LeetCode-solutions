@@ -1,19 +1,26 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         
-        stack = []
-        hashmap = {
+        opposite = {
             '(': ')',
             '{': '}',
             '[': ']'
         }
         
-        for char in s:
-            if char in hashmap:
-                stack.append(char)
-            elif stack != [] and char == hashmap[stack[-1]]:
-                stack.pop()
+        stack = []
+        
+        for i in s:
+            if i in opposite:
+                stack.append(i)
             else:
-                return False
+                if stack == []:
+                    return False
+                elif i == opposite[stack[-1]]:
+                    stack.pop()
+                else:
+                    return False
+        
         if stack == []:
             return True
+        else:
+            return False
