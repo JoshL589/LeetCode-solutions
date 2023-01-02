@@ -4,13 +4,13 @@ class Solution:
         row = len(image[0])
         col = len(image)
         seen = set()
-        def dfs(sr, sc):
-            if 0 <= sr < col and 0 <= sc < row and image[sr][sc] == starting_colour and (sr,sc) not in seen:
-                seen.add((sr,sc))
-                image[sr][sc] = color
-                dfs(sr+1, sc)
-                dfs(sr-1, sc)
-                dfs(sr, sc+1)
-                dfs(sr, sc-1)
+        def dfs(y, x):
+            if 0 <= x < row and 0 <= y < col and image[y][x] == starting_colour and (y, x) not in seen:
+                seen.add((y, x))
+                image[y][x] = color
+                dfs(y + 1, x)
+                dfs(y - 1, x)
+                dfs(y, x+1)
+                dfs(y, x-1)
         dfs(sr, sc)
         return image
