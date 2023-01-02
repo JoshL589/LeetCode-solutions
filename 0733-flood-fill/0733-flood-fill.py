@@ -8,8 +8,8 @@ class Solution:
             if 0 <= x < row and 0 <= y < col and image[y][x] == starting_colour and (y, x) not in seen:
                 seen.add((y, x))
                 image[y][x] = color
-                dfs(y + 1, x)
-                dfs(y - 1, x)
+                dfs(y+1, x)
+                dfs(y-1, x)
                 dfs(y, x+1)
                 dfs(y, x-1)
         dfs(sr, sc)
