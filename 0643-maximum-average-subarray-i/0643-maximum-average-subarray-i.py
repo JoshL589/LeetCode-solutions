@@ -13,6 +13,5 @@ class Solution:
             curr -= nums[i -k]
             curr += nums[i]
             ans = max(ans, curr/k)
-            print(curr)
             
         return ans
