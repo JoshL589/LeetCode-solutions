@@ -5,19 +5,22 @@ class Solution:
         """
         #two pointers, filling the array starting from the end
         
+        l = m - 1
+        r = n - 1
         x = m + n - 1
-        
-        while m > 0 and n > 0:
-            if nums1[m - 1] > nums2[n - 1]:
-                nums1[x] = nums1[m - 1]
-                m -= 1
-                x -= 1
-            else:
-                nums1[x] = nums2[n-1]
-                n -= 1
-                x -= 1
 
-        while n > 0:
-            nums1[x] = nums2[n-1]
-            n -= 1
+        
+        while l >= 0 and r >= 0:
+            if nums1[l] > nums2[r]:
+                nums1[x] = nums1[l]
+                x -= 1
+                l -= 1
+            else:
+                nums1[x] = nums2[r]
+                x -= 1
+                r -= 1
+
+        while r >= 0:   
+            nums1[x] = nums2[r]
             x -= 1
+            r -= 1
