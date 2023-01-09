@@ -13,5 +13,6 @@ class Solution:
                     return False
             dic1[s[i]] = t[i]
             dic2[t[i]] = s[i]
+            
 
         return True
