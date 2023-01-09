@@ -9,13 +9,9 @@ class Solution:
         #while right hasnt reached end
         while r < len(nums):
             
-            #update max
-            ans = max(ans, curr1)
-            
             #if 0, add to 0 counter
             if nums[r] == 0:
                 curr0 += 1
-                
                 
             #auto matically add to 1 counter and increment r
             curr1 += 1
