@@ -1,6 +1,5 @@
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        dic1 = {}
         dic2 = {}
         
         for i in nums2:
