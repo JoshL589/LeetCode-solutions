@@ -11,6 +11,6 @@ class Solution:
                 nums[l] = nums[r]
                 nums[r] = 0
                 l += 1
-            if nums[l] != 0:
+            elif nums[l] != 0:
                 l += 1
             r += 1
